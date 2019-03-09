@@ -1,0 +1,32 @@
+#btn_Send {
+    -fx-background-image: url("../image/mail.jpg");
+    -fx-background-size: 100% 100%;
+    -fx-background-color: transparent;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-border-width: 0;
+    -fx-min-height: 50;
+    -fx-border-color: transparent;
+}
+
+#text_Input {
+    -fx-border-width: 0;
+    -fx-min-height: 50;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#text_Input:focused {
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+    -fx-background-color: transparent;
+}
+
+#pane_0_0, #pane_1_1{
+    -fx-background-color: rgba(128, 0, 128,.3);
+}
+
+#pane_0_1, #pane_1_0{
+    -fx-background-color: rgba(255,165,0,.3);
+}
+
