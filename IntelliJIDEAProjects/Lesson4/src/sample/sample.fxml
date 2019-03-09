@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.TextFlow?>
+
+<GridPane fx:id="root" xmlns:fx="http://javafx.com/fxml/1"
+          xmlns="http://javafx.com/javafx/8.0.172-ea"
+          fx:controller="sample.Controller"
+          maxWidth="-Infinity"
+          maxHeight="-Infinity"
+          minWidth="600"
+          minHeight="400"
+          gridLinesVisible="false"
+          stylesheets="@resources/css/style.css">
+    <columnConstraints>
+        <ColumnConstraints hgrow="ALWAYS"
+                           halignment="LEFT"
+                           percentWidth="80"
+                           fx:id="col_0"/>
+        <ColumnConstraints hgrow="ALWAYS"
+                           halignment="LEFT"
+                           percentWidth="20"
+                           fx:id="col_1"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="90"
+                        valignment="TOP"
+                        fx:id="row_0"/>
+        <RowConstraints valignment="CENTER"
+                        percentHeight="10"
+                        minHeight="50"
+                        vgrow="ALWAYS"
+                        fx:id="row_1"/>
+    </rowConstraints>
+    <children>
+        <Pane GridPane.columnIndex="0"
+              GridPane.rowIndex="0"
+              GridPane.fillHeight="true"
+              GridPane.fillWidth="true"
+              fx:id="pane_0_0">
+            <children>
+                <TextFlow GridPane.columnIndex="0"
+                          GridPane.fillHeight="true"
+                          GridPane.fillWidth="true"
+                          maxWidth="-Infinity"
+                          maxHeight="-Infinity"
+                          minHeight="-NaN"
+                          fx:id="text_Chat"/>
+            </children>
+        </Pane>
+        <Pane GridPane.columnIndex="0"
+              GridPane.rowIndex="1"
+              GridPane.fillHeight="true"
+              GridPane.fillWidth="true"
+              fx:id="pane_0_1">
+            <children>
+                <TextField GridPane.fillWidth="true"
+                           GridPane.columnIndex="0"
+                           GridPane.rowIndex="1"
+                           GridPane.hgrow="ALWAYS"
+                           maxWidth="+Infinity"
+                           fx:id="text_Input"
+                           onKeyPressed="#enterPressKey"
+                />
+            </children>
+        </Pane>
+        <Pane GridPane.columnIndex="1"
+              GridPane.rowIndex="0"
+              GridPane.fillHeight="true"
+              GridPane.fillWidth="true"
+              fx:id="pane_1_0">
+            <children>
+
+            </children>
+        </Pane>
+        <Pane GridPane.columnIndex="1"
+              GridPane.rowIndex="1"
+              GridPane.fillHeight="true"
+              GridPane.fillWidth="true"
+              fx:id="pane_1_1">
+            <children>
+                <Button GridPane.columnIndex="1"
+                        GridPane.rowIndex="1"
+                        GridPane.halignment="LEFT"
+                        prefWidth="50"
+                        minWidth="50"
+                        onAction="#click"
+                        fx:id="btn_Send"/>
+            </children>
+        </Pane>
+    </children>
+</GridPane>
