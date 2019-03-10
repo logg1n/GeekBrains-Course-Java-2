@@ -2,14 +2,11 @@ package sample;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Group;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseButton;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.TextFlow;
+import javafx.scene.layout.VBox;
 
 public class Controller {
     @FXML
@@ -19,12 +16,12 @@ public class Controller {
     private TextField text_Input;
 
     @FXML
-    private TextFlow text_Chat;
+    private VBox vbox_text_chat;
 
     @FXML
     private void enterPressKey(KeyEvent event){
         switch (event.getCode()){
-            case ENTER: text_Input.setText ("");break;//addChatMessage();break;
+            case ENTER: addChatMessage ();break;
             case ESCAPE: text_Input.setFocusTraversable (false);
         }
     }
@@ -35,9 +32,11 @@ public class Controller {
     }
 
     private void addChatMessage(){
-        ComponentMessage com = new ComponentMessage (text_Input.getText (),"");
-        text_Chat.getChildren ().add (com);
+        ComponentMessage group = new ComponentMessage (text_Input.getText () ,"");
+        group.setVisible (true);
+        group.setStyle ("-fx-end-margin: 10");
+        vbox_text_chat.getChildren ().add (group);
         text_Input.setText ("");
-        text_Chat.layout ();
+        vbox_text_chat.layout ();
     }
 }
