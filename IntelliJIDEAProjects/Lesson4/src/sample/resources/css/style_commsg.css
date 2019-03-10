@@ -1,9 +1,0 @@
-#label_msg{
-    -fx-background-image: "sample/resources/image/defaultIco.jpg";
-    -fx-min-height: 50;
-    -fx-min-width: 50;
-    -fx-background-repeat: no-repeat;
-    -fx-background-position: left;
-    -fx-background-size: 50, 50;
-    -fx-text-alignment: center;
-}
