@@ -1,0 +1,6 @@
+#label_com{
+    -fx-background-size: 30, 30;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left;
+    -fx-text-alignment: center;
+  }

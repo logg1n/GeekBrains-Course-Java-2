@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<Group xmlns:fx="http://javafx.com/fxml/1"
+       xmlns="http://javafx.com/javafx"
+       fx:id="group_com"
+       stylesheets="@/css/style_commsg.css">
+    <Label fx:id="label_com" >
+        <graphic>
+            <ImageView fx:id="img_com">
+                <image>
+                    <Image url="@/image/defaultIco.jpg"/>
+                </image>
+            </ImageView>
+        </graphic>
+    </Label>
+</Group>
