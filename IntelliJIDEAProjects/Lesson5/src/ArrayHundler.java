@@ -1,6 +1,6 @@
 public class ArrayHundler {
-    static  float[] a1;
-    static  float[] a2;
+    static volatile float[] a1;
+    static volatile float[] a2;
 
     public static void runArrayThread(float[] array){
 
