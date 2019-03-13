@@ -3,8 +3,6 @@ import java.util.Arrays;
 public class MainClass {
     static final int size = 10000000;
     static long time;
-    static volatile float[] a1;
-    static volatile float[] a2;
 
     public static void main(String[] args) {
         float[] array = new ArrayGenerator ().giveArray (1);
@@ -30,9 +28,11 @@ public class MainClass {
         ArrayHundler.runArrayThread (arrayThread);
 /*
         System.arraycopy (a1, 0, arrayThread, 0, a1.length);
-        System.arraycopy (a2, 0, arrayThread, a1.length, a2.length);
+
+          System.arraycopy (a2, 0, arrayThread, a1.length, a2.length);
+    */
         time = System.currentTimeMillis ( ) - time;
-  */
+
         System.out.println ("milliseconds thread: " + time);
 
         for (int i = 0; i < 10; i++)

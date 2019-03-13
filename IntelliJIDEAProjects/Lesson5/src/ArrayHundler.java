@@ -1,13 +1,20 @@
 public class ArrayHundler {
+    static  float[] a1;
+    static  float[] a2;
+
     public static void runArrayThread(float[] array){
-        float[] a1 = new float[array.length / 2];
-        float[] a2 = new float[array.length / 2];
+
+        a1 = new float[array.length / 2];
+        a2 = new float[array.length / 2];
 
         System.arraycopy (array, 0, a1, 0, a1.length);
         System.arraycopy (array, a1.length, a2, 0, a2.length);
 
-        new Thread (() -> runArrayThread (a1));
-        new Thread (() -> runArrayThread (a2));
+        new Thread (() -> runArray (a1)).start ();
+        new Thread (() -> runArray (a2)).start ();
+
+        System.arraycopy (a1, 0, array, 0, a1.length);
+        System.arraycopy (a2, 0, array, a1.length, a2.length);
      }
 
     public static void runArray(float[] arrays){
