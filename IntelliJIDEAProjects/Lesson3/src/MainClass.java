@@ -11,8 +11,8 @@ public class MainClass {
 
         ListMap<?> listMap = new ListMap<> ( );
         listMap.inArray (stringArr);
-        //listMap.print ( );
-        //listMap.printlnUnique();
+        listMap.print ( );
+        listMap.printlnUnique();
 
         /* _____________________________________________________________________ */
 
@@ -25,8 +25,8 @@ public class MainClass {
         phoneBook.add ("name" + 3, 22024L + 25);
         phoneBook.add ("name" + 3, 22024L + 49);
 
-        //phoneBook.get ("name3");
-        //phoneBook.printPhoneBook ();
+        phoneBook.get ("name3");
+        phoneBook.printPhoneBook ();
 
         /* _____________________________________________________________________ */
 
@@ -34,17 +34,17 @@ public class MainClass {
         miltiMap.put (1, 1, "string1");
         miltiMap.put (2, 2, "string2");
         miltiMap.put (3, 1, "string3");
-    /*
+    
         for (int inth = 1; inth <= miltiMap.size ( ); inth++) {
             System.out.printf ("value: %s\n", miltiMap.getValueK(1 ));
         }
-     */
-        //    System.out.println (miltiMap.size () );
-/*
+    
+            System.out.println (miltiMap.size () );
+
         for (Object o : miltiMap.getValueT (1))
             System.out.println (o );
- */
-        /* _____________________________________________________________________ */
+
+       /* _____________________________________________________________________ */
 
         NodeList<Integer> node = new NodeList<> ( );
         int integer = 0;
@@ -52,8 +52,8 @@ public class MainClass {
             node.add (integer);
         }
 
-//        node.printList ( );
- //    node.printRev ();
-        //    System.out.println (node.size ( ) );
+        node.printList ( );
+        node.printRev ();
+            System.out.println (node.size ( ) );
     }
 }
