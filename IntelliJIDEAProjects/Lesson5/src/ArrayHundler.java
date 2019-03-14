@@ -1,11 +1,11 @@
 public class ArrayHundler {
-    static volatile float[] a1;
-    static volatile float[] a2;
+    static  float[] a1;
+    static  float[] a2;
 
     public static void runArrayThread(float[] array){
 
         a1 = new float[array.length / 2];
-        a2 = new float[array.length / 2];
+        a2 = new float[a1.length];
 
         System.arraycopy (array, 0, a1, 0, a1.length);
         System.arraycopy (array, a1.length, a2, 0, a2.length);

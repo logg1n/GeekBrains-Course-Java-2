@@ -1,6 +1,5 @@
 public class MainClass {
-    static final int size = 10000000;
-    static long time;
+    private static long time;
 
     public static void main(String[] args) {
         float[] array = new ArrayGenerator ().giveArray (1);
@@ -19,7 +18,7 @@ public class MainClass {
 
         for (int i = 0; i < 10; i++) {
             if (array[i] != arrayThread[i])
-                System.out.printf ("%d != %d index [%d]\n", array[i], arrayThread[i], i);
+                System.out.printf ("%f != %f index [%d]\n", array[i], arrayThread[i], i);
         }
    }
 
