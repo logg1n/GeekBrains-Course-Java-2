@@ -14,12 +14,15 @@ public abstract class User {
         input = new DataInputStream (socket.getInputStream ( ));
         output = new DataOutputStream (socket.getOutputStream ( ));
         reader = new BufferedReader (new InputStreamReader (System.in));
+        
         in = new Thread (() -> {
             listenInput ( );
         });
+        
         out = new Thread (() -> {
             listenOutput ( );
         });
+        
         try {
             in.start ( );
             out.start ( );
