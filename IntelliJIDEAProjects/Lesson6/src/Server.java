@@ -7,14 +7,14 @@ public class Server extends User{
     private static Socket socket;
 
     @Override
-    public void start() throws IOException {
+    public void start( ) throws IOException {
         server = new ServerSocket (4040);
         if (!server.isClosed ( )) {
             System.out.println ("Server started ...");
             socket = server.accept ( );
             System.out.println ("user connected ...");
             setSocket (socket);
-            init ();
+            init ( );
         } else {
             closed ( );
         }
