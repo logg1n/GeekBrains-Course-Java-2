@@ -1,12 +1,14 @@
+import java.util.Arrays;
+
 public class MainClass {
     private static long time;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         float[] array = new ArrayGenerator ().giveArray (1);
         float[] arrayThread = new ArrayGenerator ().giveArray (1);
 
         time = System.currentTimeMillis ( );
-        ArrayHundler.runArray (array);
+        ArrayHundler.runArray (array,0);
         time = System.currentTimeMillis ( ) - time;
         System.out.println ("milliseconds no thread: " + time);
 
@@ -16,10 +18,10 @@ public class MainClass {
         time = System.currentTimeMillis ( ) - time;
         System.out.println ("milliseconds thread: " + time);
 
-        for (int i = 0; i < 10; i++) {
-            if (array[i] != arrayThread[i])
-                System.out.printf ("%f != %f index [%d]\n", array[i], arrayThread[i], i);
-        }
+        if (Arrays.equals (arrayThread, array))
+            System.out.println ("Equals!" );
+        else
+            System.out.println ("No Equals!" );
    }
 
 }
